@@ -1,0 +1,10 @@
+{ "projects": [{
+    "title": "EpiProj",
+    "originator": "Colin & Mikey",
+    "course": "React",
+    "Stage": "Idea",
+    "description": "description",
+    "participants": ["Mikey", "Colin", "Shane", "Jack"],
+    "timesCompleted": 0
+  }]
+}
