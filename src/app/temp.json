@@ -2,9 +2,18 @@
     "title": "EpiProj",
     "originator": "Colin & Mikey",
     "course": "React",
-    "Stage": "Idea",
-    "description": "description",
+    "stage": "Idea",
+    "description": "App for Epicodus students to create group week projects.",
     "participants": ["Mikey", "Colin", "Shane", "Jack"],
-    "timesCompleted": 0
+    "timesCompleted": "0"
+  },
+  {
+    "title": "PissPot",
+    "originator": "Adam, John, Mikey, Tyler",
+    "course": "React",
+    "stage": "Idea",
+    "description": "App about the best restroom in your area and where to purchase marijuana",
+    "participants": ["Mikey", "Colin", "Shane", "Jack"],
+    "timesCompleted": "0"
   }]
 }

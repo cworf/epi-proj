@@ -9,7 +9,6 @@ export class ProjectService {
 
   constructor(private database: AngularFireDatabase) {
     this.projects = database.list('projects');
-    console.log(this.projects)
   }
 
   getProjects(){
@@ -19,5 +18,4 @@ export class ProjectService {
   getProjectById(projectId: string){
     return this.database.object('projects/' + projectId);
   }
-
 }

@@ -1,5 +1,8 @@
-<h1>{{(projectToDisplay | async)?.title}}</h1>
-<h1>{{(projectToDisplay | async)?.originator}}</h1>
-<h1>{{(projectToDisplay | async)?.course}}</h1>
-<h1>{{(projectToDisplay | async)?.Stage}}</h1>
-asdf
+<div class="jumbotron">
+  <h1>{{(projectToDisplay | async)?.title}}</h1>
+  <h5>{{(projectToDisplay | async)?.originator}}</h5>
+  <h5>{{(projectToDisplay | async)?.course}}</h5>
+  <h5>{{(projectToDisplay | async)?.stage}}</h5>
+  <h5>{{(projectToDisplay | async)?.description}}</h5>
+  <h5>{{(projectToDisplay | async)?.participants}}</h5>
+</div>
