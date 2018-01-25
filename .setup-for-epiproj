@@ -1,5 +1,5 @@
 SETUP: -------------------------->
-  ng new //project name//
+  ng new //project name// --style=scss
   git init
   npm install bootstrap --save
   npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save
@@ -17,8 +17,7 @@ SETUP: -------------------------->
 
   .angular-cli.json
     "styles": [
-      "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "styles.css"
+      "../node_modules/bootstrap/dist/css/bootstrap.min.css"
     ],
 
   api-keys.ts
