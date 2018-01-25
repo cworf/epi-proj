@@ -31,4 +31,9 @@ export class ProjectService {
                           description: project.description,
                           course: project.course});
   }
+
+  deleteProject(project){
+    var projectEntry = this.getProjectById(project.$key);
+    projectEntry.remove();
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -10,15 +11,14 @@ import { ProjectService } from '../project.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private ps: ProjectService) { }
+  constructor(private ps: ProjectService, private router: Router) { }
 
   ngOnInit() {
   }
 
   submitForm(title: string, creator: string, description: string, course: string){
-    const newProject = new Project(title, creator, course, "Idea", description, [], "0");
+    const newProject = new Project(title, creator, course, "Idea", description, [creator], "0");
     this.ps.addProject(newProject);
+    this.router.navigate(['projects']);
   }
-
-
 }

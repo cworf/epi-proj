@@ -2,11 +2,11 @@
 <ng-template #defaultBlock>
   <div class="jumbotron">
     <h1>{{projectToDisplay.title}}</h1>
-    <h5>{{projectToDisplay.creator}}</h5>
-    <h5>{{projectToDisplay.course}}</h5>
-    <h5>{{projectToDisplay.stage}}</h5>
-    <h5>{{projectToDisplay.description}}</h5>
-    <h5>{{projectToDisplay.participants}}</h5>
+    <h5>By: {{projectToDisplay.creator}}</h5>
+    <h5>Current Course: {{projectToDisplay.course}}</h5>
+    <h5>Project Stage: {{projectToDisplay.stage}}</h5>
+    <h5>Description: {{projectToDisplay.description}}</h5>
+    <h5>Participants: {{projectToDisplay.participants}}</h5>
   </div>
   <button class="btn btn-primary" (click)="activateEdit(projectToDisplay)">Edit</button>
 </ng-template>
