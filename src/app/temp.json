@@ -1,6 +1,6 @@
 { "projects": [{
     "title": "EpiProj",
-    "originator": "Colin & Mikey",
+    "creator": "Colin & Mikey",
     "course": "React",
     "stage": "Idea",
     "description": "App for Epicodus students to create group week projects.",
@@ -9,7 +9,7 @@
   },
   {
     "title": "PissPot",
-    "originator": "Adam, John, Mikey, Tyler",
+    "creator": "Adam, John, Mikey, Tyler",
     "course": "React",
     "stage": "Idea",
     "description": "App about the best restroom in your area and where to purchase marijuana",

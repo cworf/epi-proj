@@ -9,15 +9,19 @@ import { Project } from '../project.model';
   providers: [ProjectService]
 })
 
-export class EditProjectComponent {
+export class EditProjectComponent implements OnInit{
 
   @Input() selectedProject;
-
   @Output() doneSender = new EventEmitter();
+
   constructor(private ps: ProjectService) { }
 
-  editSubmit(){
-    this.doneSender.emit()
+  updateSubmit(project){
+    this.ps.updateProject(project);
+    this.doneSender.emit();
+  }
+
+  ngOnInit() {
     console.log(this.selectedProject)
   }
 

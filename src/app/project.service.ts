@@ -23,4 +23,12 @@ export class ProjectService {
   addProject(newProject: Project){
     this.projects.push(newProject);
   }
+
+  updateProject(project){
+    var projectEntry = this.getProjectById(project.$key);
+    projectEntry.update({title: project.title,
+                          creator: project.creator,
+                          description: project.description,
+                          course: project.course});
+  }
 }

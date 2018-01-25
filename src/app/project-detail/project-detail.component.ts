@@ -25,7 +25,11 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
      this.projectId = urlParameters['id'];
    });
-   this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+   this.projectService.getProjectById(this.projectId).subscribe(data => {
+     console.log(data);
+     this.projectToDisplay = data;
+   });
+
   }
 
   activateEdit(project){
