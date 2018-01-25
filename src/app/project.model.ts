@@ -6,6 +6,6 @@ export class Project {
     public stage: string,
     public description: string,
     public participants: string[],
-    public timesCompleted: number
+    public timesCompleted: string
   ){}
 }

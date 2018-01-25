@@ -1,8 +1,17 @@
-<div class="jumbotron">
-  <h1>{{(projectToDisplay | async)?.title}}</h1>
-  <h5>{{(projectToDisplay | async)?.originator}}</h5>
-  <h5>{{(projectToDisplay | async)?.course}}</h5>
-  <h5>{{(projectToDisplay | async)?.stage}}</h5>
-  <h5>{{(projectToDisplay | async)?.description}}</h5>
-  <h5>{{(projectToDisplay | async)?.participants}}</h5>
-</div>
+<div *ngIf="!currentlyEditing; then defaultBlock; else editBlock"></div>
+<ng-template #defaultBlock>
+  <div class="jumbotron">
+    <h1>{{(projectToDisplay | async)?.title}}</h1>
+    <h5>{{(projectToDisplay | async)?.originator}}</h5>
+    <h5>{{(projectToDisplay | async)?.course}}</h5>
+    <h5>{{(projectToDisplay | async)?.stage}}</h5>
+    <h5>{{(projectToDisplay | async)?.description}}</h5>
+    <h5>{{(projectToDisplay | async)?.participants}}</h5>
+  </div>
+  <button class="btn btn-primary" (click)="activateEdit(projectToDisplay)">Edit</button>
+</ng-template>
+<ng-template #editBlock>
+  <div class="jumbotron">
+    <app-edit-project [selectedProject]="projectToDisplay" (doneSender)="clearEdit()"></app-edit-project>
+  </div>
+</ng-template>

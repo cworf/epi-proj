@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { masterFirebaseConfig } from './api-keys'
+import { masterFirebaseConfig } from './api-keys';
+import { Project } from './project.model';
 
 @Injectable()
 export class ProjectService {
@@ -17,5 +18,9 @@ export class ProjectService {
 
   getProjectById(projectId: string){
     return this.database.object('projects/' + projectId);
+  }
+
+  addProject(newProject: Project){
+    this.projects.push(newProject);
   }
 }

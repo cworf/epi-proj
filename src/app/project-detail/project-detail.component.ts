@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProjectService } from '../project.service';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -12,6 +13,7 @@ import { ProjectService } from '../project.service';
 export class ProjectDetailComponent implements OnInit {
   projectId: string;
   projectToDisplay;
+  currentlyEditing: Project;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,11 +23,17 @@ export class ProjectDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      console.log(urlParameters)
      this.projectId = urlParameters['id'];
    });
    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
-   console.log(this.projectToDisplay)
   }
 
+  activateEdit(project){
+    this.currentlyEditing = project;
+    console.log(this.currentlyEditing)
+  }
+
+  clearEdit(){
+    this.currentlyEditing = null;
+  }
 }

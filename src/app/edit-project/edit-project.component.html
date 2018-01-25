@@ -1,3 +1,15 @@
-<p>
-  edit-project works!
-</p>
+<div class="edit-form">
+  <div class="form-group">
+    <input placeholder="title" [(ngModel)]="selectedProject.title">
+  </div>
+  <div class="form-group">
+    <input placeholder="creator" [(ngModel)]="selectedProject.creator">
+  </div>
+  <div class="form-group">
+    <input placeholder="course" [(ngModel)]="selectedProject.course">
+  </div>
+  <div class="form-group">
+    <textarea placeholder="description" [(ngModel)]="selectedProject.description"></textarea>
+  </div>
+  <button class="btn btn-primary" (click)="editSubmit();">Submit</button>
+</div>
