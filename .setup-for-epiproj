@@ -81,3 +81,22 @@ SETUP---------------->
           ".write": "true"
         }
       }
+
+FIREBASE HOSTING INIT ----------------------->
+  ng build --env=prod
+  firebase login
+  firebase init
+
+    what public folder
+      dist
+    rest is default N
+
+  firebase deploy
+
+  //project name//.firebaseapp.com
+  ***epi-proj.firebaseapp.com***
+
+FIREBASE UPDATE ------------------>
+  ng build --env=prod
+  firebase login?
+  firebase deploy

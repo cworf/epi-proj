@@ -1,4 +1,9 @@
+.header {
+  margin-top: 100px;
+}
+
 .header h1 {
+  font-size: 113px;
   color: #00b3b4;
 }
 
